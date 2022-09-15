@@ -1,0 +1,40 @@
+﻿@model BitirmeFriendyol.Areas.AdminPanel.Model.ViewModel.AdminLoginViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Giriş</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/signin.css" rel="stylesheet" />
+</head>
+<body style="background-color:aqua">
+    <main class="form-signin">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <img src="~/Areas/AdminPanel/Images/UserImages/sonlogopng1.png" style="border-radius:30px" alt="" width="300" height="100" class="mb-lg-4" />
+            <h1 class="h3 mt-4 mb-3 fw-normal">Giriş Yapınız</h1>
+
+            <div class="form-floating">
+                @Html.EditorFor(model => model.Mail, new { htmlattributes = new {@class = "form-control"}})
+                <label for="floatingInput">Email address</label>
+                @Html.ValidationMessageFor(model => model.Mail,"", new {@class = "text-danger"})
+            </div>
+            <div class="form-floating">
+                @Html.EditorFor(model => model.Password, new { htmlattributes = new {@class= "form-control"}})
+                <label for="floatingPassword">Password</label>
+                @Html.ValidationMessageFor(model => model.Password,"", new {@class = "text-danger"})
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Giriş Yap</button>
+            <p class="mt-5 mb-3 text-muted">&copy; 2022–2023</p>
+
+        }
+
+    </main>
+</body>
+</html>

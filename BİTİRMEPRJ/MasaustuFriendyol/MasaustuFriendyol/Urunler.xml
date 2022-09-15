@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UrunRehberi>
+  <urun id="7a7bd8cb-75a6-408e-8c2c-11349a8f3d9e">
+    <name>Yeni Ürün</name>
+    <description>Yeni</description>
+    <stock>22,00</stock>
+    <price>322,00</price>
+    <category>5</category>
+    <creationDay>2022-09-11T19:21:12.5047922+03:00</creationDay>
+    <brand>5</brand>
+    <sellStatus>true</sellStatus>
+    <image>System.Collections.Generic.HashSet`1[MasaustuFriendyol.ProductImage]</image>
+  </urun>
+</UrunRehberi>

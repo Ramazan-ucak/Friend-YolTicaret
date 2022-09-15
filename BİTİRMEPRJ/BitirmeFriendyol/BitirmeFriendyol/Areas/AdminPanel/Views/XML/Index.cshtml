@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/AdminPanel/Views/Shared/_LayoutPage1.cshtml";
+}
+
+@*<h2>Liste</h2>
+@for (int i = 0; i < ViewBag.Adet; i++)
+{
+    @ViewBag.ItemName
+}*@
+
+
+
+
+
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">XML Ürünleri</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <a href="@Url.Action("Create","Product")" class="btn btn-sm btn-outline-primary">Ürün Ekle</a>
+    </div>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Ürün ID</th>
+            <th>Ürün Adı</th>
+            <th>Ürün Açıklaması</th>
+            <th>Ürün Stok</th>
+            <th>Ürün Fiyat</th>
+            <th>Ürün Kategori</th>
+            <th>Ürün Marka</th>
+            <th>Ürün Resim</th>
+
+
+</tr>
+</thead>
+<tbody>
+    @foreach (var item in ViewBag.ulkeler)
+    {
+        <tr>
+
+           
+
+            <td>@ViewBag.ItemID</td>
+            <td>@ViewBag.ItemName</td>
+            <td>@ViewBag.ItemDes</td>
+            <td>@ViewBag.ItemStock</td>
+            <td>@ViewBag.ItemPrice</td>
+            <td>@ViewBag.ItemCategory</td>
+            <td>@ViewBag.ItemBrand</td>
+            <td>@ViewBag.ItemImage</td>
+
+
+
+</tr>
+        }
+
+
+    </tbody>
+</table>
